@@ -31,7 +31,7 @@ public class ArrayListOperation {
 	return "[" + result.substring(0, result.length() - 2) + "]";
     }
 
-    public static void printlnLntList(List<Integer> nums) {
+    public static void printlnIntList(List<Integer> nums) {
 	System.out.println(integerArrayListToString(nums));
     }
 

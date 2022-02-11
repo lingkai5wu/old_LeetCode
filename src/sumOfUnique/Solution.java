@@ -45,12 +45,12 @@ public class Solution {
     }
 
     public int sumOfUnique3(int[] nums) {
-	int[] cnt = new int[101];
+	int[] count = new int[101];
 	for (int i : nums)
-	    cnt[i]++;
+	    count[i]++;
 	int res = 0;
 	for (int i = 1; i <= 100; i++) {
-	    if (cnt[i] == 1)
+	    if (count[i] == 1)
 		res += i;
 	}
 	return res;

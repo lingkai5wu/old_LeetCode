@@ -33,7 +33,7 @@ public class TreeOperation {
     public static void printlnWithoutEndingNull(TreeNode root) {
 	StringBuilder sb = new StringBuilder(treeNodeToString(root, true));
 	int len = sb.length();
-	while (sb.substring(len - 7, len - 1).equals(", null")) {
+	while (sb.length() > 7 && sb.substring(len - 7, len - 1).equals(", null")) {
 	    sb.delete(len - 7, len - 1);
 	    len = sb.length();
 	}

@@ -14,7 +14,7 @@ public class Solution {
 
 	TreeNode root = TreeOperation.stringTo("[1,null,2,3]");
 	TreeOperation.printlnTree(root);
-	ArrayListOperation.printlnLntList(new Solution().inorderTraversal(root));
+	ArrayListOperation.printlnIntList(new Solution().inorderTraversal(root));
     }
 
     public List<Integer> inorderTraversal(TreeNode root) {
