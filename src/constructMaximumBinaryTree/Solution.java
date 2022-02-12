@@ -20,7 +20,7 @@ public class Solution {
     }
 
     /* 将 nums[lo..hi] 构造成符合条件的树，返回根节点 */
-    private TreeNode build(int[] nums, int left, int right) {
+    TreeNode build(int[] nums, int left, int right) {
 	// base case
 	if (left > right - 1) {
 	    return null;
