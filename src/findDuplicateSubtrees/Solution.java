@@ -19,8 +19,8 @@ public class Solution {
 	}
     }
 
-    private Map<String, Integer> count = new HashMap<>();
-    private List<TreeNode> res = new ArrayList<>();
+    Map<String, Integer> count = new HashMap<>();
+    List<TreeNode> res = new ArrayList<>();
 
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
 	traverse(root);
@@ -28,7 +28,7 @@ public class Solution {
     }
 
     /* ¸¨Öúº¯Êý */
-    private String traverse(TreeNode root) {
+    String traverse(TreeNode root) {
 	if (root == null) {
 	    return "#";
 	}

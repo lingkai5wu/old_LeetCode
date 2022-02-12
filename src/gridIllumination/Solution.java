@@ -62,11 +62,11 @@ public class Solution {
 	return ans;
     }
 
-    private void increment(Map<Integer, Integer> map, int key) {
+    void increment(Map<Integer, Integer> map, int key) {
 	map.put(key, map.getOrDefault(key, 0) + 1);
     }
 
-    private void decrement(Map<Integer, Integer> map, int key) {
+    void decrement(Map<Integer, Integer> map, int key) {
 	if (map.get(key) == 1) {
 	    map.remove(key);
 	} else {

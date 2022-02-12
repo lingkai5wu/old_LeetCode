@@ -23,7 +23,7 @@ public class Solution {
 	return res;
     }
 
-    private void inorder(TreeNode root, List<Integer> res) {
+    void inorder(TreeNode root, List<Integer> res) {
 	if (root == null) {
 	    return;
 	}

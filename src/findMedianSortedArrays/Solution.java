@@ -44,7 +44,7 @@ public class Solution {
 	return (getKth(nums1, 0, n - 1, nums2, 0, m - 1, left) + getKth(nums1, 0, n - 1, nums2, 0, m - 1, right)) * 0.5;
     }
 
-    private int getKth(int[] nums1, int start1, int end1, int[] nums2, int start2, int end2, int k) {
+    int getKth(int[] nums1, int start1, int end1, int[] nums2, int start2, int end2, int k) {
 	int len1 = end1 - start1 + 1;
 	int len2 = end2 - start2 + 1;
 	// 让 len1 的长度小于 len2，这样就能保证如果有数组空了，一定是 len1

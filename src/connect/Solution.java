@@ -44,7 +44,7 @@ public class Solution {
 	return root;
     }
 
-    private void connectTwoNode(Node left, Node right) {
+    void connectTwoNode(Node left, Node right) {
 	if (left == null || right == null) {
 	    return;
 	}

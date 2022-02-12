@@ -39,7 +39,7 @@ public class Solution {
 	return res;
     }
 
-    private void dfs(int i, int j) {
+    void dfs(int i, int j) {
 	if (i < 0 || j < 0 || i > m - 1 || j > n - 1) {
 	    return;
 	}

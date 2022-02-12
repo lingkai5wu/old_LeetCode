@@ -18,7 +18,7 @@ public class Solution {
 	return build(inorder, 0, inorder.length, postorder, 0, postorder.length);
     }
 
-    private TreeNode build(int[] inorder, int inStart, int inEnd, int[] postorder, int postStart, int postEnd) {
+    TreeNode build(int[] inorder, int inStart, int inEnd, int[] postorder, int postStart, int postEnd) {
 	if (postStart > postEnd - 1) {
 	    return null;
 	}

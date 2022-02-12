@@ -19,6 +19,7 @@ public class Solution {
 	int res = 0;
 	m = grid1.length;
 	n = grid1[0].length;
+	g = grid2;
 
 	for (int i = 0; i < m; i++) {
 	    for (int j = 0; j < n; j++) {
@@ -28,7 +29,6 @@ public class Solution {
 	    }
 	}
 
-	g = grid2;
 	for (int i = 0; i < m; i++) {
 	    for (int j = 0; j < n; j++) {
 		if (grid2[i][j] == 1) {
@@ -40,7 +40,7 @@ public class Solution {
 	return res;
     }
 
-    private void dfs(int i, int j) {
+    void dfs(int i, int j) {
 	if (i < 0 || j < 0 || i > m - 1 || j > n - 1) {
 	    return;
 	}

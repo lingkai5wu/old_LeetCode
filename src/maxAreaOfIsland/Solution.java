@@ -31,7 +31,7 @@ public class Solution {
 	return res;
     }
 
-    private int dfs(int i, int j) {
+    int dfs(int i, int j) {
 	if (i < 0 || j < 0 || i > m - 1 || j > n - 1) {
 	    return 0;
 	}
