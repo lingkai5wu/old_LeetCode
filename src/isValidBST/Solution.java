@@ -21,10 +21,7 @@ public class Solution {
 	    return true;
 	}
 
-	if (min != null && root.val <= min.val) {
-	    return false;
-	}
-	if (max != null && root.val >= max.val) {
+	if ((min != null && root.val <= min.val) || (max != null && root.val >= max.val)) {
 	    return false;
 	}
 
