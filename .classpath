@@ -7,6 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="playground"/>
-	<classpathentry kind="src" path="weekly"/>
+	<classpathentry excluding="/" kind="src" path="weekly"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
