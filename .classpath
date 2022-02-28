@@ -7,9 +7,5 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="playground"/>
-<<<<<<< HEAD
-=======
-	<classpathentry excluding="/" kind="src" path="weekly"/>
->>>>>>> refs/remotes/origin/master
 	<classpathentry kind="output" path="bin"/>
 </classpath>
