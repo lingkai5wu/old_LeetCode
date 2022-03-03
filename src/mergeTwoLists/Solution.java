@@ -20,19 +20,19 @@ public class Solution {
 	}
 
 	public ListNode mergeTwoLists1(ListNode list1, ListNode list2) {
-		ListNode h = new ListNode(), t = h;
+		ListNode dummy = new ListNode(-1), p = dummy;
 		while (list1 != null && list2 != null) {
 			if (list1.val < list2.val) {
-				t.next = list1;
+				p.next = list1;
 				list1 = list1.next;
 			} else {
-				t.next = list2;
+				p.next = list2;
 				list2 = list2.next;
 			}
-			t = t.next;
+			p = p.next;
 		}
-		t.next = list1 == null ? list2 : list1;
-		return h.next;
+		p.next = list1 != null ? list1 : list2;
+		return dummy.next;
 	}
 
 	public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
