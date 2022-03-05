@@ -1,7 +1,9 @@
 package nextGreaterElement;
 
-import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
 
 import array.IntegerArrayOperation;
 
@@ -34,20 +36,21 @@ public class Solution {
 		return res;
 	}
 
-	// Œ¥ µœ÷£°£°
 	public int[] nextGreaterElement2(int[] nums1, int[] nums2) {
 		int m = nums1.length, n = nums2.length;
+		Map<Integer, Integer> map = new HashMap<>();
+		Deque<Integer> stack = new LinkedList<>();
+		for (int i = n - 1; i >= 0; i--) {
+			while (!stack.isEmpty() && stack.peek() <= nums2[i]) {
+				stack.pop();
+			}
+			map.put(nums2[i], stack.isEmpty() ? -1 : stack.peek());
+			stack.push(nums2[i]);
+		}
+
 		int[] res = new int[m];
 		for (int i = 0; i < m; i++) {
-			res[i] = -1;
-			Deque<Integer> s = new ArrayDeque<>();
-			for (int j = n - 1; j >= 0; j--) {
-				while (!s.isEmpty() && s.peek() <= nums2[j]) {
-					s.pop();
-				}
-				res[i] = s.isEmpty() ? -1 : s.peek();
-				s.push(nums2[j]);
-			}
+			res[i] = map.get(nums1[i]);
 		}
 		return res;
 	}
