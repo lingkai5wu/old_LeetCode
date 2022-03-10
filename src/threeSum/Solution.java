@@ -38,7 +38,7 @@ public class Solution {
 					break;
 				}
 				if (nums[j] + nums[k] == target) {
-					List<Integer> list = new ArrayList<Integer>();
+					List<Integer> list = new ArrayList<>();
 					list.add(nums[i]);
 					list.add(nums[j]);
 					list.add(nums[k]);

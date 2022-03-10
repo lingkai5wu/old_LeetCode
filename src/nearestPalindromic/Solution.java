@@ -29,7 +29,7 @@ public class Solution {
 				res = String.valueOf(nums[i]);
 			}
 		}
-		
+
 		return res;
 	}
 
