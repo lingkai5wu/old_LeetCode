@@ -1,7 +1,7 @@
 package kthSmallest;
 
-import binaryTree.Node;
 import binaryTree.BinaryTreeOperation;
+import binaryTree.Node;
 
 public class Solution {
 

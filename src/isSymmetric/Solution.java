@@ -3,8 +3,8 @@ package isSymmetric;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import binaryTree.Node;
 import binaryTree.BinaryTreeOperation;
+import binaryTree.Node;
 
 public class Solution {
 

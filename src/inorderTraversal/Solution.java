@@ -3,8 +3,8 @@ package inorderTraversal;
 import java.util.ArrayList;
 import java.util.List;
 
-import binaryTree.Node;
 import binaryTree.BinaryTreeOperation;
+import binaryTree.Node;
 import list.ArrayListOperation;
 
 public class Solution {
