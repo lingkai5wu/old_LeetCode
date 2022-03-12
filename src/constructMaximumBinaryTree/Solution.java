@@ -1,6 +1,6 @@
 package constructMaximumBinaryTree;
 
-import binaryTree.TreeNode;
+import binaryTree.Node;
 import binaryTree.BinaryTreeOperation;
 
 public class Solution {
@@ -9,18 +9,18 @@ public class Solution {
 		// TODO 自动生成的方法存根
 
 		int[] nums = { 3, 2, 1, 6, 0, 5 };
-		TreeNode root = new Solution().constructMaximumBinaryTree(nums);
+		Node root = new Solution().constructMaximumBinaryTree(nums);
 		BinaryTreeOperation.printlnTree(root);
 		BinaryTreeOperation.printlnWithoutEndingNull(root);
 	}
 
 	/* 主函数 */
-	public TreeNode constructMaximumBinaryTree(int[] nums) {
+	public Node constructMaximumBinaryTree(int[] nums) {
 		return build(nums, 0, nums.length);
 	}
 
 	/* 将 nums[lo..hi] 构造成符合条件的树，返回根节点 */
-	TreeNode build(int[] nums, int left, int right) {
+	Node build(int[] nums, int left, int right) {
 		// base case
 		if (left > right - 1) {
 			return null;
@@ -35,7 +35,7 @@ public class Solution {
 			}
 		}
 
-		TreeNode root = new TreeNode(max);
+		Node root = new Node(max);
 		// 递归调用构造左右子树
 		root.left = build(nums, left, maxi);
 		root.right = build(nums, maxi + 1, right);

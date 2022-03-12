@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class BinaryTreeOperation {
 
-	private static void prettyPrintlnTree(TreeNode node, String prefix, boolean isLeft) {
+	private static void prettyPrintlnTree(Node node, String prefix, boolean isLeft) {
 		if (node == null) {
 			System.out.println("Empty tree");
 			return;
@@ -22,15 +22,15 @@ public class BinaryTreeOperation {
 		}
 	}
 
-	public static void println(TreeNode root) {
+	public static void println(Node root) {
 		System.out.println(treeNodeToString(root, true));
 	}
 
-	public static void printlnWithoutNull(TreeNode root) {
+	public static void printlnWithoutNull(Node root) {
 		System.out.println(treeNodeToString(root, false));
 	}
 
-	public static void printlnWithoutEndingNull(TreeNode root) {
+	public static void printlnWithoutEndingNull(Node root) {
 		StringBuilder sb = new StringBuilder(treeNodeToString(root, true));
 		int len = sb.length();
 		while (sb.length() > 7 && sb.substring(len - 7, len - 1).equals(", null")) {
@@ -40,16 +40,16 @@ public class BinaryTreeOperation {
 		System.out.println(sb.toString());
 	}
 
-	public static void printlnTree(TreeNode node) {
+	public static void printlnTree(Node node) {
 		prettyPrintlnTree(node, "", true);
 	}
 
-	public static void printlnTree(String str, TreeNode node) {
+	public static void printlnTree(String str, Node node) {
 		System.out.println(str);
 		prettyPrintlnTree(node, "", true);
 	}
 
-	public static TreeNode stringTo(String input) {
+	public static Node stringTo(String input) {
 		input = input.trim();
 		input = input.substring(1, input.length() - 1);
 		if (input.length() == 0) {
@@ -58,13 +58,13 @@ public class BinaryTreeOperation {
 
 		String[] parts = input.split(",");
 		String item = parts[0];
-		TreeNode root = new TreeNode(Integer.parseInt(item));
-		Queue<TreeNode> nodeQueue = new LinkedList<>();
+		Node root = new Node(Integer.parseInt(item));
+		Queue<Node> nodeQueue = new LinkedList<>();
 		nodeQueue.add(root);
 
 		int index = 1;
 		while (!nodeQueue.isEmpty()) {
-			TreeNode node = nodeQueue.remove();
+			Node node = nodeQueue.remove();
 
 			if (index == parts.length) {
 				break;
@@ -74,7 +74,7 @@ public class BinaryTreeOperation {
 			item = item.trim();
 			if (!item.equals("null")) {
 				int leftNumber = Integer.parseInt(item);
-				node.left = new TreeNode(leftNumber);
+				node.left = new Node(leftNumber);
 				nodeQueue.add(node.left);
 			}
 
@@ -86,23 +86,23 @@ public class BinaryTreeOperation {
 			item = item.trim();
 			if (!item.equals("null")) {
 				int rightNumber = Integer.parseInt(item);
-				node.right = new TreeNode(rightNumber);
+				node.right = new Node(rightNumber);
 				nodeQueue.add(node.right);
 			}
 		}
 		return root;
 	}
 
-	private static String treeNodeToString(TreeNode root, boolean needNull) {
+	private static String treeNodeToString(Node root, boolean needNull) {
 		if (root == null) {
 			return "[]";
 		}
 
 		String output = "";
-		Queue<TreeNode> nodeQueue = new LinkedList<>();
+		Queue<Node> nodeQueue = new LinkedList<>();
 		nodeQueue.add(root);
 		while (!nodeQueue.isEmpty()) {
-			TreeNode node = nodeQueue.remove();
+			Node node = nodeQueue.remove();
 
 			if (node == null) {
 				if (needNull) {

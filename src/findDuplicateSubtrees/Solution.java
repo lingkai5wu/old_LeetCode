@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import binaryTree.TreeNode;
+import binaryTree.Node;
 import binaryTree.BinaryTreeOperation;
 
 public class Solution {
@@ -13,22 +13,22 @@ public class Solution {
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = BinaryTreeOperation.stringTo("[0,0,0,0,null,null,0,null,null,null,0]");
-		for (TreeNode node : new Solution().findDuplicateSubtrees(root)) {
+		Node root = BinaryTreeOperation.stringTo("[0,0,0,0,null,null,0,null,null,null,0]");
+		for (Node node : new Solution().findDuplicateSubtrees(root)) {
 			BinaryTreeOperation.printlnWithoutEndingNull(node);
 		}
 	}
 
 	Map<String, Integer> count = new HashMap<>();
-	List<TreeNode> res = new ArrayList<>();
+	List<Node> res = new ArrayList<>();
 
-	public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
+	public List<Node> findDuplicateSubtrees(Node root) {
 		traverse(root);
 		return res;
 	}
 
 	/* 辅助函数 */
-	String traverse(TreeNode root) {
+	String traverse(Node root) {
 		if (root == null) {
 			return "#";
 		}

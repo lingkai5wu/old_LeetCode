@@ -1,6 +1,6 @@
 package invertTree;
 
-import binaryTree.TreeNode;
+import binaryTree.Node;
 import binaryTree.BinaryTreeOperation;
 
 public class Solution {
@@ -8,7 +8,7 @@ public class Solution {
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = BinaryTreeOperation.stringTo("[4,2,7,1,3,6,9]");
+		Node root = BinaryTreeOperation.stringTo("[4,2,7,1,3,6,9]");
 
 		BinaryTreeOperation.printlnTree("after", root);
 		new Solution().invertTree(root);
@@ -18,12 +18,12 @@ public class Solution {
 
 	}
 
-	public TreeNode invertTree(TreeNode root) {
+	public Node invertTree(Node root) {
 		if (root == null) {
 			return null;
 		}
 
-		TreeNode temp = root.left;
+		Node temp = root.left;
 		root.left = root.right;
 		root.right = temp;
 

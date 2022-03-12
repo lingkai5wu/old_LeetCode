@@ -1,6 +1,6 @@
 package maxSumBST;
 
-import binaryTree.TreeNode;
+import binaryTree.Node;
 import binaryTree.BinaryTreeOperation;
 
 public class Solution {
@@ -8,18 +8,18 @@ public class Solution {
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = BinaryTreeOperation.stringTo("[1,4,3,2,4,2,5,null,null,null,null,null,null,4,6]");
+		Node root = BinaryTreeOperation.stringTo("[1,4,3,2,4,2,5,null,null,null,null,null,null,4,6]");
 		System.out.println(new Solution().maxSumBST(root));
 	}
 
 	int maxSum;
 
-	public int maxSumBST(TreeNode root) {
+	public int maxSumBST(Node root) {
 		traverse(root);
 		return maxSum;
 	}
 
-	int[] traverse(TreeNode root) {
+	int[] traverse(Node root) {
 		if (root == null) {
 			return new int[] { 1, Integer.MAX_VALUE, Integer.MIN_VALUE, 0 };
 		}

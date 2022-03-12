@@ -1,6 +1,6 @@
 package deleteNode;
 
-import binaryTree.TreeNode;
+import binaryTree.Node;
 import binaryTree.BinaryTreeOperation;
 
 public class Solution {
@@ -8,12 +8,12 @@ public class Solution {
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = BinaryTreeOperation.stringTo("[5,3,6,2,4,null,7]");
+		Node root = BinaryTreeOperation.stringTo("[5,3,6,2,4,null,7]");
 		int key = 3;
 		BinaryTreeOperation.printlnWithoutEndingNull(new Solution().deleteNode(root, key));
 	}
 
-	public TreeNode deleteNode(TreeNode root, int key) {
+	public Node deleteNode(Node root, int key) {
 		if (root == null)
 			return null;
 		if (root.val == key) {
@@ -21,7 +21,7 @@ public class Solution {
 				return root.right;
 			if (root.right == null)
 				return root.left;
-			TreeNode minNode = getMin(root.right);
+			Node minNode = getMin(root.right);
 			root.val = minNode.val;
 			root.right = deleteNode(root.right, minNode.val);
 		} else if (root.val > key) {
@@ -32,7 +32,7 @@ public class Solution {
 		return root;
 	}
 
-	TreeNode getMin(TreeNode node) {
+	Node getMin(Node node) {
 		// BST 最左边的就是最小的
 		while (node.left != null)
 			node = node.left;
