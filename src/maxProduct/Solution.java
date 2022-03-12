@@ -1,14 +1,14 @@
 package maxProduct;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = TreeOperation.stringTo("[1,2,3,4,5,6]");
+		TreeNode root = BinaryTreeOperation.stringTo("[1,2,3,4,5,6]");
 		System.out.println(new Solution().maxProduct(root));
 	}
 

@@ -1,18 +1,18 @@
 package isSameTree;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode p = TreeOperation.stringTo("[1,2,3]");
-		TreeNode q = TreeOperation.stringTo("[1,2,3]");
+		TreeNode p = BinaryTreeOperation.stringTo("[1,2,3]");
+		TreeNode q = BinaryTreeOperation.stringTo("[1,2,3]");
 
-		TreeOperation.printlnTree("p", p);
-		TreeOperation.printlnTree("q", q);
+		BinaryTreeOperation.printlnTree("p", p);
+		BinaryTreeOperation.printlnTree("q", q);
 
 		System.out.println(new Solution().isSameTree(p, q));
 	}

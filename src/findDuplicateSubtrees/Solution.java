@@ -6,16 +6,16 @@ import java.util.List;
 import java.util.Map;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = TreeOperation.stringTo("[0,0,0,0,null,null,0,null,null,null,0]");
+		TreeNode root = BinaryTreeOperation.stringTo("[0,0,0,0,null,null,0,null,null,null,0]");
 		for (TreeNode node : new Solution().findDuplicateSubtrees(root)) {
-			TreeOperation.printlnWithoutEndingNull(node);
+			BinaryTreeOperation.printlnWithoutEndingNull(node);
 		}
 	}
 

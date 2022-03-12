@@ -1,17 +1,17 @@
 package flatten;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = TreeOperation.stringTo("[1,2,5,3,4,null,6]");
+		TreeNode root = BinaryTreeOperation.stringTo("[1,2,5,3,4,null,6]");
 		new Solution().flatten(root);
-		TreeOperation.printlnTree(root);
-		TreeOperation.printlnWithoutEndingNull(root);
+		BinaryTreeOperation.printlnTree(root);
+		BinaryTreeOperation.printlnWithoutEndingNull(root);
 	}
 
 	public void flatten(TreeNode root) {

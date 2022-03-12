@@ -4,14 +4,14 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = TreeOperation.stringTo("[1,2,2,3,4,4,3]");
+		TreeNode root = BinaryTreeOperation.stringTo("[1,2,2,3,4,4,3]");
 		System.out.println(new Solution().isSymmetric1(root));
 		System.out.println(new Solution().isSymmetric2(root));
 	}

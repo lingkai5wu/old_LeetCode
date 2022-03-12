@@ -1,7 +1,7 @@
 package constructMaximumBinaryTree;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
@@ -10,8 +10,8 @@ public class Solution {
 
 		int[] nums = { 3, 2, 1, 6, 0, 5 };
 		TreeNode root = new Solution().constructMaximumBinaryTree(nums);
-		TreeOperation.printlnTree(root);
-		TreeOperation.printlnWithoutEndingNull(root);
+		BinaryTreeOperation.printlnTree(root);
+		BinaryTreeOperation.printlnWithoutEndingNull(root);
 	}
 
 	/* Ö÷º¯Êý */

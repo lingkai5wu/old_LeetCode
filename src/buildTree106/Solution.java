@@ -1,7 +1,7 @@
 package buildTree106;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
@@ -10,8 +10,8 @@ public class Solution {
 
 		int[] inorder = { 9, 3, 15, 20, 7 }, postorder = { 9, 15, 7, 20, 3 };
 		TreeNode root = new Solution().buildTree(inorder, postorder);
-		TreeOperation.printlnTree(root);
-		TreeOperation.printlnWithoutEndingNull(root);
+		BinaryTreeOperation.printlnTree(root);
+		BinaryTreeOperation.printlnWithoutEndingNull(root);
 	}
 
 	public TreeNode buildTree(int[] inorder, int[] postorder) {

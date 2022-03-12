@@ -1,16 +1,16 @@
 package searchBST;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = TreeOperation.stringTo("[4,2,7,1,3]");
+		TreeNode root = BinaryTreeOperation.stringTo("[4,2,7,1,3]");
 		int val = 2;
-		TreeOperation.printlnWithoutEndingNull(new Solution().searchBST(root, val));
+		BinaryTreeOperation.printlnWithoutEndingNull(new Solution().searchBST(root, val));
 	}
 
 	public TreeNode searchBST(TreeNode root, int val) {

@@ -3,7 +3,7 @@ package binaryTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class TreeOperation {
+public class BinaryTreeOperation {
 
 	private static void prettyPrintlnTree(TreeNode node, String prefix, boolean isLeft) {
 		if (node == null) {

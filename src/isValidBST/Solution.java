@@ -1,14 +1,14 @@
 package isValidBST;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = TreeOperation.stringTo("[5,1,4,null,null,3,6]");
+		TreeNode root = BinaryTreeOperation.stringTo("[5,1,4,null,null,3,6]");
 		System.out.println(new Solution().isValidBST(root));
 	}
 

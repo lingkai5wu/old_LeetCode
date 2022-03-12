@@ -1,20 +1,20 @@
 package invertTree;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = TreeOperation.stringTo("[4,2,7,1,3,6,9]");
+		TreeNode root = BinaryTreeOperation.stringTo("[4,2,7,1,3,6,9]");
 
-		TreeOperation.printlnTree("after", root);
+		BinaryTreeOperation.printlnTree("after", root);
 		new Solution().invertTree(root);
-		TreeOperation.printlnTree("before", root);
+		BinaryTreeOperation.printlnTree("before", root);
 
-		TreeOperation.println(root);
+		BinaryTreeOperation.println(root);
 
 	}
 

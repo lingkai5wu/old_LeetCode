@@ -1,16 +1,16 @@
 package deleteNode;
 
 import binaryTree.TreeNode;
-import binaryTree.TreeOperation;
+import binaryTree.BinaryTreeOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		TreeNode root = TreeOperation.stringTo("[5,3,6,2,4,null,7]");
+		TreeNode root = BinaryTreeOperation.stringTo("[5,3,6,2,4,null,7]");
 		int key = 3;
-		TreeOperation.printlnWithoutEndingNull(new Solution().deleteNode(root, key));
+		BinaryTreeOperation.printlnWithoutEndingNull(new Solution().deleteNode(root, key));
 	}
 
 	public TreeNode deleteNode(TreeNode root, int key) {
