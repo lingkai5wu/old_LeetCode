@@ -1,16 +1,20 @@
-package canFinish;
+package findOrder;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+
+import array.IntegerArrayOperation;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		int numCourses = 2;
-		int[][] prerequisites = { { 1, 0 }, { 0, 1 } };
-		System.out.println(new Solution().canFinish(numCourses, prerequisites));
+		int numCourses = 4;
+		int[][] prerequisites = { { 1, 0 }, { 2, 0 }, { 3, 1 }, { 3, 2 } };
+		IntegerArrayOperation.println(new Solution().findOrder(numCourses, prerequisites));
 	}
 
 	// 邻接表
@@ -19,9 +23,11 @@ public class Solution {
 	boolean[] onPath, visited;
 	// 记录图中是否有环
 	boolean hasCycle = false;
+	// 记录后序遍历
+	List<Integer> postorder = new ArrayList<>();
 
 	@SuppressWarnings("unchecked")
-	public boolean canFinish(int numCourses, int[][] prerequisites) {
+	public int[] findOrder(int numCourses, int[][] prerequisites) {
 		graph = new LinkedList[numCourses];
 		onPath = new boolean[numCourses];
 		visited = new boolean[numCourses];
@@ -35,7 +41,12 @@ public class Solution {
 		for (int v = 0; v < numCourses; v++) {
 			traverse(v);
 		}
-		return !hasCycle;
+
+		if (hasCycle) {
+			return new int[] {};
+		}
+		Collections.reverse(postorder);
+		return postorder.stream().mapToInt(Integer::valueOf).toArray();
 	}
 
 	void traverse(int v) {
@@ -51,6 +62,7 @@ public class Solution {
 		for (int w : graph[v]) {
 			traverse(w);
 		}
+		postorder.add(v);
 		onPath[v] = false;
 	}
 }
