@@ -1,13 +1,13 @@
-package weeklyContest284;
+package digArtifacts;
 
-public class Q2 {
+public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
 		int n = 2;
 		int[][] artifacts = { { 0, 0, 0, 0 }, { 0, 1, 1, 1 } }, dig = { { 0, 0 }, { 0, 1 } };
-		System.out.println(new Q2().digArtifacts(n, artifacts, dig));
+		System.out.println(new Solution().digArtifacts(n, artifacts, dig));
 	}
 
 	public int digArtifacts(int n, int[][] artifacts, int[][] dig) {
@@ -17,10 +17,10 @@ public class Q2 {
 		}
 
 		int res = 0;
-		for (int[] is : artifacts) {
+		for (int[] art : artifacts) {
 			boolean flag = true;
-			for (int i = is[0]; i <= is[2] && flag; i++) {
-				for (int j = is[1]; j <= is[3]; j++) {
+			for (int i = art[0]; i <= art[2] && flag; i++) {
+				for (int j = art[1]; j <= art[3]; j++) {
 					if (!area[i][j]) {
 						flag = false;
 						break;
