@@ -10,19 +10,23 @@ public class Solution {
 	}
 
 	public boolean validUtf8(int[] data) {
-		int len = 0;
+		int n = 0;
 		for (int bit : data) {
 			if (bit >> 7 == 1) { // n字节字符
-				if ((bit << 6 & 1) == 1) { // n字节字符的第一字节
+				if ((bit >> 6 & 1) == 1) { // n字节字符的第一字节
 					int i = 6;
-					while ((bit << i & 1) == 1) {
-						len++;
+					while ((bit >> i & 1) == 1) {
+						n++;
+						i--;
+					}
+					if (n > 3) {
+						return false;
 					}
 				} else {
-					len--;
+					n--;
 				}
 			}
 		}
-		return len == 0;
+		return n == 0;
 	}
 }
