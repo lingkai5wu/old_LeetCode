@@ -28,10 +28,11 @@ public class Solution {
 			int l = 0, r = f.size() - 1;
 			while (l < r) {
 				int mid = l + r + 1 >> 1;
-				if (f.get(mid) <= k)
+				if (f.get(mid) <= k) {
 					l = mid;
-				else
+				} else {
 					r = mid - 1;
+				}
 			}
 			k -= f.get(r);
 			res++;

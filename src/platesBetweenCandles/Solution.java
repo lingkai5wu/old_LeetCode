@@ -70,31 +70,36 @@ public class Solution {
 			int l = 0, r = list.size() - 1;
 			while (l < r) {
 				int mid = l + r >> 1;
-				if (list.get(mid) >= a)
+				if (list.get(mid) >= a) {
 					r = mid;
-				else
+				} else {
 					l = mid + 1;
+				}
 			}
-			if (list.get(r) >= a)
+			if (list.get(r) >= a) {
 				c = list.get(r);
-			else
+			} else {
 				continue;
+			}
 			// 找到 b 左边最近的蜡烛
 			l = 0;
 			r = list.size() - 1;
 			while (l < r) {
 				int mid = l + r + 1 >> 1;
-				if (list.get(mid) <= b)
+				if (list.get(mid) <= b) {
 					l = mid;
-				else
+				} else {
 					r = mid - 1;
+				}
 			}
-			if (list.get(r) <= b)
+			if (list.get(r) <= b) {
 				d = list.get(r);
-			else
+			} else {
 				continue;
-			if (c <= d)
+			}
+			if (c <= d) {
 				answer[i] = g[d + 1] - g[c];
+			}
 		}
 		return answer;
 	}
