@@ -10,10 +10,7 @@ class Bank {
 	}
 
 	public boolean transfer(int account1, int account2, long money) {
-		if (check(account1) || check(account2)) {
-			return false;
-		}
-		if (balance[account1 - 1] < money) {
+		if (check(account1) || check(account2) || (balance[account1 - 1] < money)) {
 			return false;
 		}
 		balance[account1 - 1] -= money;
@@ -30,10 +27,7 @@ class Bank {
 	}
 
 	public boolean withdraw(int account, long money) {
-		if (check(account)) {
-			return false;
-		}
-		if (balance[account - 1] < money) {
+		if (check(account) || (balance[account - 1] < money)) {
 			return false;
 		}
 		balance[account - 1] -= money;
