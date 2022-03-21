@@ -1,7 +1,7 @@
 package buildTree106;
 
 import binaryTree.BinaryTreeOperation;
-import binaryTree.Node;
+import binaryTree.TreeNode;
 
 public class Solution {
 
@@ -9,16 +9,16 @@ public class Solution {
 		// TODO 自动生成的方法存根
 
 		int[] inorder = { 9, 3, 15, 20, 7 }, postorder = { 9, 15, 7, 20, 3 };
-		Node root = new Solution().buildTree(inorder, postorder);
+		TreeNode root = new Solution().buildTree(inorder, postorder);
 		BinaryTreeOperation.printlnTree(root);
 		BinaryTreeOperation.printlnWithoutEndingNull(root);
 	}
 
-	public Node buildTree(int[] inorder, int[] postorder) {
+	public TreeNode buildTree(int[] inorder, int[] postorder) {
 		return build(inorder, 0, inorder.length, postorder, 0, postorder.length);
 	}
 
-	Node build(int[] inorder, int inStart, int inEnd, int[] postorder, int postStart, int postEnd) {
+	TreeNode build(int[] inorder, int inStart, int inEnd, int[] postorder, int postStart, int postEnd) {
 		if (postStart > postEnd - 1) {
 			return null;
 		}
@@ -32,7 +32,7 @@ public class Solution {
 		}
 
 		int leftSize = index - inStart;
-		Node root = new Node(rootVal);
+		TreeNode root = new TreeNode(rootVal);
 		root.left = build(inorder, inStart, index, postorder, postStart, postStart + leftSize);
 		root.right = build(inorder, index + 1, inEnd, postorder, postStart + leftSize, postEnd - 1);
 		return root;

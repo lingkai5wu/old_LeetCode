@@ -1,27 +1,27 @@
 package convertBST;
 
 import binaryTree.BinaryTreeOperation;
-import binaryTree.Node;
+import binaryTree.TreeNode;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		Node root = BinaryTreeOperation.stringTo("[4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]");
-		Node res = new Solution().convertBST(root);
+		TreeNode root = BinaryTreeOperation.stringTo("[4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]");
+		TreeNode res = new Solution().convertBST(root);
 		BinaryTreeOperation.printlnTree(res);
 		BinaryTreeOperation.printlnWithoutEndingNull(res);
 	}
 
-	public Node convertBST(Node root) {
+	public TreeNode convertBST(TreeNode root) {
 		traverse(root);
 		return root;
 	}
 
 	int sum = 0;
 
-	void traverse(Node root) {
+	void traverse(TreeNode root) {
 		if (root == null) {
 			return;
 		}

@@ -1,21 +1,20 @@
 package tree2str;
 
 import binaryTree.BinaryTreeOperation;
-import binaryTree.Node;
+import binaryTree.TreeNode;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		Node root = BinaryTreeOperation.stringTo("[1,2,3,null,4]");
+		TreeNode root = BinaryTreeOperation.stringTo("[1,2,3,null,4]");
 		System.out.println(new Solution().tree2str(root));
 	}
 
 	StringBuilder sb = new StringBuilder();
 
-	// 在提交时用 TreeNode 替换 Node
-	public String tree2str(Node root) {
+	public String tree2str(TreeNode root) {
 		// base case
 		if (root == null) {
 			return "";
@@ -24,7 +23,7 @@ public class Solution {
 		return sb.toString();
 	}
 
-	void traverse(Node root) {
+	void traverse(TreeNode root) {
 		sb.append(root.val);
 		// 左子树非空
 		if (root.left != null) {

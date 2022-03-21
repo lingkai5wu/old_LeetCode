@@ -6,29 +6,29 @@ import java.util.List;
 import java.util.Map;
 
 import binaryTree.BinaryTreeOperation;
-import binaryTree.Node;
+import binaryTree.TreeNode;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		Node root = BinaryTreeOperation.stringTo("[0,0,0,0,null,null,0,null,null,null,0]");
-		for (Node node : new Solution().findDuplicateSubtrees(root)) {
+		TreeNode root = BinaryTreeOperation.stringTo("[0,0,0,0,null,null,0,null,null,null,0]");
+		for (TreeNode node : new Solution().findDuplicateSubtrees(root)) {
 			BinaryTreeOperation.printlnWithoutEndingNull(node);
 		}
 	}
 
 	Map<String, Integer> count = new HashMap<>();
-	List<Node> res = new ArrayList<>();
+	List<TreeNode> res = new ArrayList<>();
 
-	public List<Node> findDuplicateSubtrees(Node root) {
+	public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
 		traverse(root);
 		return res;
 	}
 
 	/* 辅助函数 */
-	String traverse(Node root) {
+	String traverse(TreeNode root) {
 		if (root == null) {
 			return "#";
 		}

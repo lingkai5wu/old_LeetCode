@@ -1,25 +1,25 @@
 package maxSumBST;
 
 import binaryTree.BinaryTreeOperation;
-import binaryTree.Node;
+import binaryTree.TreeNode;
 
 public class Solution {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
 
-		Node root = BinaryTreeOperation.stringTo("[1,4,3,2,4,2,5,null,null,null,null,null,null,4,6]");
+		TreeNode root = BinaryTreeOperation.stringTo("[1,4,3,2,4,2,5,null,null,null,null,null,null,4,6]");
 		System.out.println(new Solution().maxSumBST(root));
 	}
 
 	int maxSum;
 
-	public int maxSumBST(Node root) {
+	public int maxSumBST(TreeNode root) {
 		traverse(root);
 		return maxSum;
 	}
 
-	int[] traverse(Node root) {
+	int[] traverse(TreeNode root) {
 		if (root == null) {
 			return new int[] { 1, Integer.MAX_VALUE, Integer.MIN_VALUE, 0 };
 		}
