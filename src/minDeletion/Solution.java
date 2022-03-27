@@ -10,6 +10,7 @@ public class Solution {
 
         int[] nums = { 1, 1, 2, 3, 5 };
         System.out.println(new Solution().minDeletion1(nums));
+        System.out.println(new Solution().minDeletion2(nums));
     }
 
     // 贪心
@@ -27,7 +28,7 @@ public class Solution {
         return res + (n - res) % 2;
     }
 
-    // 栈模拟
+    // 栈模拟，但没贪心快
     public int minDeletion2(int[] nums) {
         int n = nums.length;
         if (n == 0) {
@@ -42,7 +43,6 @@ public class Solution {
                 stack.push(nums[i]);
             }
         }
-        int res = n - stack.size();
-        return res + res % 2;
+        return n - stack.size() + stack.size() % 2;
     }
 }
