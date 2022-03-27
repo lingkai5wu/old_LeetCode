@@ -5,30 +5,30 @@ import binaryTree.TreeNode;
 
 public class Solution {
 
-	public static void main(String[] args) {
-		// TODO 自动生成的方法存根
+    public static void main(String[] args) {
+        // TODO 自动生成的方法存根
 
-		TreeNode root = BinaryTreeOperation.stringTo("[4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]");
-		TreeNode res = new Solution().bstToGst(root);
-		BinaryTreeOperation.printlnTree(res);
-		BinaryTreeOperation.printlnWithoutEndingNull(res);
-	}
+        TreeNode root = BinaryTreeOperation.stringTo("[4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]");
+        TreeNode res = new Solution().bstToGst(root);
+        BinaryTreeOperation.printlnTree(res);
+        BinaryTreeOperation.printlnWithoutEndingNull(res);
+    }
 
-	public TreeNode bstToGst(TreeNode root) {
-		traverse(root);
-		return root;
-	}
+    public TreeNode bstToGst(TreeNode root) {
+        traverse(root);
+        return root;
+    }
 
-	int sum = 0;
+    int sum = 0;
 
-	void traverse(TreeNode root) {
-		if (root == null) {
-			return;
-		}
+    void traverse(TreeNode root) {
+        if (root == null) {
+            return;
+        }
 
-		traverse(root.right);
-		sum += root.val;
-		root.val = sum;
-		traverse(root.left);
-	}
+        traverse(root.right);
+        sum += root.val;
+        root.val = sum;
+        traverse(root.left);
+    }
 }
