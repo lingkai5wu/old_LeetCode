@@ -14,15 +14,17 @@ public class Solution {
         int[] p = new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
         int[] cnts = new int[31];
 
-        for (int i : nums)
+        for (int i : nums) {
             cnts[i]++;
+        }
 
         int mask = 1 << 10;
         long[] f = new long[mask];
         f[0] = 1;
         for (int i = 2; i <= 30; i++) {
-            if (cnts[i] == 0)
+            if (cnts[i] == 0) {
                 continue;
+            }
 
             int cur = 0, x = i;
             boolean flag = true;
@@ -50,11 +52,13 @@ public class Solution {
         }
         long ans = 0;
         // 统计所有非空集的方案数
-        for (int i = 1; i < mask; i++)
+        for (int i = 1; i < mask; i++) {
             ans = (ans + f[i]) % MOD;
+        }
         // 在此基础上，考虑每个 1 选择与否对答案的影响
-        for (int i = 0; i < cnts[1]; i++)
+        for (int i = 0; i < cnts[1]; i++) {
             ans = ans * 2 % MOD;
+        }
         return (int) ans;
     }
 }

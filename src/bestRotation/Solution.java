@@ -51,12 +51,14 @@ public class Solution {
                 add(a, n - 1);
             }
         }
-        for (int i = 1; i <= n; i++)
+        for (int i = 1; i <= n; i++) {
             c[i] += c[i - 1];
+        }
         int ans = 0;
         for (int i = 1; i <= n; i++) {
-            if (c[i] > c[ans])
+            if (c[i] > c[ans]) {
                 ans = i;
+            }
         }
         return ans;
     }
