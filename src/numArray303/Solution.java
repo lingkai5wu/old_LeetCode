@@ -1,4 +1,4 @@
-package numArray;
+package numArray303;
 
 class NumArray {
     int[] preSum;
