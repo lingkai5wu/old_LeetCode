@@ -16,7 +16,7 @@ public class Solution {
     }
 
     public boolean canReorderDoubled(int[] arr) {
-        Map<Integer, Integer> cnt = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> cnt = new HashMap<>();
         for (int n : arr) {
             cnt.put(n, cnt.getOrDefault(n, 0) + 1);
         }
