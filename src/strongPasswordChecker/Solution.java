@@ -36,7 +36,8 @@ public class Solution {
                 }
                 int cnt = j - i;
                 if (cnt >= 3) {
-                    tot += cnt / 3;}
+                    tot += cnt / 3;
+                }
                 i = j;
             }
             return Math.max(tot, caseAndNumCnt);
@@ -46,7 +47,8 @@ public class Solution {
             for (int i = 0; i < n;) {
                 int j = i;
                 while (j < n && cs[j] == cs[i]) {
-                    j++;}
+                    j++;
+                }
                 int cnt = j - i;
                 if (cnt >= 3) {
                     tot += cnt / 3;
@@ -57,7 +59,8 @@ public class Solution {
             int base = n - 20, cur = base;
             for (int i = 0; i < 3; i++) {
                 if (i == 2) {
-                    cnts[i] = tot;}
+                    cnts[i] = tot;
+                }
                 if (cnts[i] != 0 && cur != 0) {
                     int t = Math.min(cnts[i] * (i + 1), cur);
                     cur -= t;
