@@ -17,8 +17,8 @@ public class Solution {
             sum += nums[i];
         }
         int max = f;
-        for (int i = 1; i < n; i++) {
-            f = f + sum - n * nums[n - i];
+        for (int i = n - 1; i > 0; i--) {
+            f += sum - n * nums[i];
             max = Math.max(f, max);
         }
         return max;
