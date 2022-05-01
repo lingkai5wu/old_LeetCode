@@ -20,8 +20,8 @@ public class Solution {
         List<Integer> res = new ArrayList<>();
         List<Integer> list1 = new ArrayList<>();
         List<Integer> list2 = new ArrayList<>();
-        traverse(root1, list1);
-        traverse(root2, list2);
+        inorder(root1, list1);
+        inorder(root2, list2);
         int i = 0, j = 0;
         while (i < list1.size() && j < list2.size()) {
             if (list1.get(i) < list2.get(j)) {
@@ -30,21 +30,20 @@ public class Solution {
                 res.add(list2.get(j++));
             }
         }
-        while (i < list1.size()) {
-            res.add(list1.get(i++));
-        }
-        while (j < list2.size()) {
-            res.add(list2.get(j++));
+        if (i < list1.size()) {
+            res.addAll(list1.subList(i, list1.size()));
+        } else {
+            res.addAll(list2.subList(j, list2.size()));
         }
         return res;
     }
 
-    void traverse(TreeNode root, List<Integer> list) {
+    void inorder(TreeNode root, List<Integer> list) {
         if (root == null) {
             return;
         }
-        traverse(root.left, list);
+        inorder(root.left, list);
         list.add(root.val);
-        traverse(root.right, list);
+        inorder(root.right, list);
     }
 }
