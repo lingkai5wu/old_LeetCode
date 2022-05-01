@@ -37,7 +37,7 @@ public class Solution {
 
     public List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> res = new ArrayList<>();
-        Deque<TreeNode> stack = new LinkedList<TreeNode>();
+        Deque<TreeNode> stack = new LinkedList<>();
         while (root != null || !stack.isEmpty()) {
             while (root != null) {
                 stack.push(root);

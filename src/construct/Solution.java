@@ -37,7 +37,7 @@ class Node {
         this.bottomLeft = bottomLeft;
         this.bottomRight = bottomRight;
     }
-};
+}
 
 public class Solution {
 
