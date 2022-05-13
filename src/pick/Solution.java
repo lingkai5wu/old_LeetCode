@@ -11,7 +11,7 @@ public class Solution {
     public static void main(String[] args) {
         // TODO 自动生成的方法存根
 
-        Solution solution = new Solution(new int[] {1, 2, 3, 3, 3});
+        Solution solution = new Solution(new int[] { 1, 2, 3, 3, 3 });
         System.out.println(solution.pick(3)); // 随机返回索引 2, 3 或者 4 之一。每个索引的返回概率应该相等。
         System.out.println(solution.pick(1)); // 返回 0 。因为只有 nums[0] 等于 1 。
         System.out.println(solution.pick(3)); // 随机返回索引 2, 3 或者 4 之一。每个索引的返回概率应该相等。
