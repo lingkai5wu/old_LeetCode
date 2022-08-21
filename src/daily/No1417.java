@@ -1,4 +1,4 @@
-package Daily;
+package daily;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

@@ -1,4 +1,4 @@
-package Daily;
+package daily;
 
 public class No1413 {
     public int minStartValue(int[] nums) {

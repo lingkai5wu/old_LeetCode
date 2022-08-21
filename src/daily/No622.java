@@ -1,4 +1,4 @@
-package Daily;
+package daily;
 
 public class No622 {
     public static void main(String[] args) {

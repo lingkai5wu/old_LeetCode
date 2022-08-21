@@ -1,4 +1,4 @@
-package PrimaryAlgorithm;
+package primaryAlgorithm;
 
 public class Array {
     public int removeDuplicates(int[] nums) {

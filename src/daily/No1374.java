@@ -1,11 +1,9 @@
-package Daily;
+package daily;
 
 public class No1374 {
     public String generateTheString(int n) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < n - 1; i++) {
-            sb.append('a');
-        }
+        sb.append("a".repeat(Math.max(0, n - 1)));
         if (n % 2 == 1) {
             sb.append('a');
         } else {
